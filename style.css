@@ -1,0 +1,2302 @@
+/* custom Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap');
+/* fonts name 
+font-family: 'Roboto', sans-serif;
+font-family: 'Kanit', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;500;600;700&family=Kanit:ital,wght@0,400;0,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Custom Settings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-size: 62.5%;
+    --blue: rgb(86, 18, 214);
+    --light-blue: rgba(86, 18, 214, 0.7);
+    --white: #fff;
+    --black: #000000;
+    --purple: rgb(52, 7, 61);
+    --creme: rgb(211, 206, 186);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(211, 206, 186);
+
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: rgb(24, 24, 49);
+}
+
+/* **************************** NavBar Section Start  **************************** */
+#navbar {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--white);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 9;
+}
+
+.c-details-navbar {
+    background: linear-gradient(to right, rgba(86, 18, 214, 0.7), rgb(211, 206, 186));
+}
+
+#navbar .logo a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#navbar .links {
+    display: flex;
+}
+
+#navbar .links ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+#navbar .links ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+#navbar .links ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: 0.3s ease-out;
+}
+
+#navbar .links ul li a.active,
+#navbar .links ul li a:hover {
+    color: var(--black);
+}
+#navbar .login a{
+    text-decoration: none;
+    color: white;
+}
+#navbar .login i {
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#navbar .login i:hover {
+    color: var(--black);
+}
+
+/*  **************************** 1st NavBar Section End  **************************** */
+/*  **************************** 2nd NavBar Section Start  **************************** */
+#navbar2 {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: rgba(86, 18, 214, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    display: none;
+}
+
+#navbar2 .logo a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#navbar2 .navLogin i {
+    color: var(--black);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#navbar2 .navLogin i:hover {
+    color: var(--white);
+}
+#navbar2.reveal.active {
+    transform: translateY(100);
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: 99;
+
+}
+.reveal {
+    display: none;
+    transform: translateY(-100);
+
+}
+#navbar2 .navSearch {
+    display: inline-block;
+    position: relative;
+}
+#navbar2 .navSearch input[type="text"] {
+    width: 50rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    outline-color: #4e99e9;
+}
+#navbar2 .navSearch button[type="submit"] {
+    background-color: #4e99e9;
+    font-size: 1.6rem;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 3.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+#navbar2 .navSearch button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+}
+
+/*  **************************** 2nd NavBar Section End ****************************  */
+/*  ****************************  Mobile bottom navbar Start  ****************************  */
+.mobBtmNav {
+    display: none;
+    transition: 0.3s ease;
+}
+/*  **************************** Mobile bottom navbar End  **************************** */
+/* **************************** Hero Section Start **************************** */
+header {
+    width: 100%;
+    height: 100%;
+}
+
+#h-section {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 80%;
+
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.swiper-slide .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-slide .img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #5612d6, rgb(211, 206, 186));
+    opacity: 0.7;
+}
+
+#h-section .hero-text {
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+    top: 25%;
+    left: 15%;
+    width: 30%;
+}
+
+#h-section .hero-text p {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#h-section .hero-text .heroSearch {
+    display: inline-block;
+    position: relative;
+}
+
+#h-section .hero-text .heroSearch input[type="text"] {
+    width: 30rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    outline-color: #4e99e9;
+}
+
+#h-section .hero-text .heroSearch button[type="submit"] {
+    background-color: #4e99e9;
+    font-size: 1.6rem;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+#h-section .hero-text .heroSearch button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+}
+
+/* **************************** Hero Section End *****************************/
+
+/* ****************************feature Section Start *****************************/
+.feature {
+    padding: 8vw 8vw 8vw 8vw;
+    text-align: center;
+}
+.feature .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+.feature .f-card {
+    background: linear-gradient(to right, rgba(86, 18, 214, 0.5), rgb(211, 206, 186));
+    backdrop-filter: blur(20px);
+    text-align: left;
+    padding: 1rem;
+}
+
+.feature .f-card i {
+    font-size: 2.3rem;
+    color: var(--black);
+}
+
+.feature .f-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black);
+    padding: 13px 0 7px 0;
+}
+
+.feature .f-card p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+/* ****************************Feature Section End**************************** */
+/* ****************************    category Section Start  ******************* */
+#category-section {
+    padding: 0 8vw 8vw 8vw;
+    text-align: center;
+
+}
+
+#category-section h1 {
+    margin: 5rem 0;
+}
+
+#category-section .category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.category-cards .card {
+    text-align: left;
+    background-color: var(--light-blue);
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.category-cards .card img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+#category-section .category-cards .card {
+    width: inherit;
+    height: 300px;
+    background: var(--light-blue);
+    border-radius: 10px;
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+}
+
+#category-section .category-cards .card .img {
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#category-section .category-cards .card .textBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 5;
+    text-align: center;
+    color: black;
+}
+
+#category-section .category-cards .card .textBox>.text {
+    font-weight: bold;
+}
+
+#category-section .category-cards .card .textBox>.head {
+    font-size: 2.5rem;
+}
+
+#category-section .category-cards .card.textBox>.price {
+    font-size: 1.7rem;
+}
+
+
+#category-section .category-cards .card:hover>.textBox {
+    opacity: 1;
+    z-index: 5;
+}
+
+#category-section .category-cards .card:hover>.img {
+    height: 90%;
+    margin: auto 0;
+    filter: blur(7px);
+    animation: anim 2s infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#category-section .category-cards .card:hover {
+    transform: scale(1.04) rotate(-1deg);
+}
+
+/*/***************************** category Section End/*****************************  */
+
+/* ****************************Courses Section Start *****************************/
+#courses-section {
+    background: linear-gradient(to right, rgba(86, 18, 214, 0.7), rgb(211, 206, 186));
+    padding: 0 8vw 4vw 8vw;
+    text-align: center;
+
+}
+
+.c-section {
+    margin-bottom: 15rem;
+    margin-top: 15rem;
+}
+
+#courses-section h1 {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#courses-section .popular .p-text,
+.free .f-text,
+.web .web-text,
+.app .app-text,
+.ai .ai-text,
+.blockchain .bChain-text {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+}
+
+#courses-section .popular .p-text a,
+.free .f-text a,
+.web .web-text a,
+.app .app-text a,
+.ai .ai-text a,
+.blockchain .bChain-text a {
+    text-align: right;
+}
+
+#courses-section .free .f-text h2,
+#courses-section .app .app-text h2,
+.ai .ai-text h2,
+.blockchain .bChain-text h2 {
+    margin-top: 5rem;
+}
+
+#courses-section .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+#courses-section .course {
+    text-align: left;
+    background-color: #f9f9ff;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+#courses-section .course img {
+    width: 100%;
+    height: 65%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.course .c-details {
+    padding: 1.7rem 1.5rem 1rem 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.course .c-details h4 {
+    font-size: 1.6rem;
+}
+
+.course .c-details span {
+    font-size: 1.3rem;
+}
+
+.course .c-details i {
+    color: #fdc938;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#courses-section .course .c-price {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#courses-section button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+}
+
+#courses-section button.learn-more {
+    width: 20rem;
+    height: auto;
+}
+
+#courses-section button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 4rem;
+    height: 4rem;
+    background: #282936;
+    border-radius: 3rem;
+}
+
+#courses-section button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+#courses-section button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 1.3rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+#courses-section button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.39rem;
+    right: 0.0625rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+#courses-section button.learn-more .button-text,
+#courses-section button.learn-more .button-text1 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.7;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.button-text1 {
+    display: none;
+}
+
+#courses-section button:hover .circle {
+    width: 100%;
+}
+
+#courses-section button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+#courses-section button:hover .button-text,
+#courses-section button:hover .button-text1 {
+    color: #fff;
+}
+
+#courses-section .course .tag,
+#courses-section-page #best {
+    background-color: rgba(255, 255, 0, 0.8);
+    backdrop-filter: blur(5px);
+    color: rgb(0, 0, 0);
+    line-height: 30px;
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    border-radius: 5%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#courses-section .app .course .tag,
+#courses-section-page #free {
+    background-color: rgba(1, 236, 253, 0.774);
+}
+
+#courses-section .ai .course .tag,
+#courses-section-page #new {
+    background-color: rgba(19, 252, 11, 0.774);
+}
+
+#courses-section .blockchain .course .tag,
+#courses-section-page #top {
+    background-color: rgba(253, 173, 1, 0.774);
+}
+
+/* ****************************Courses Section End *****************************/
+
+
+/***************************** Registration Section Start**************************** */
+.registration {
+    margin-top: 20rem;
+    padding: 6vw 8vw 6vw 8vw;
+    background-image: linear-gradient(rgba(86, 18, 214, 0.7), rgba(52, 7, 61, 0.5)), url(images/signup.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reminder {
+    color: #fff;
+}
+
+.reminder h1 {
+    color: #fff;
+}
+
+.reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.reminder .time .date {
+    text-align: center;
+    padding: 1.7rem 3.3rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(55, 0, 252, 0.37);
+    border-radius: 10px;
+    margin: 0 5px 10px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 1.8rem;
+    font-weight: 700px;
+}
+
+.registration .form {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem 4rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 17, 255, 0.37);
+}
+
+.registration .form h4 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.registration .form input {
+    margin: 1.5rem 0;
+    padding: 1.7rem 12rem 1.5rem 1rem;
+    border: 1px solid rgb(84, 40, 241);
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.registration .form input::placeholder {
+    color: #383232;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.registration .form .btn {
+    margin-top: 1.5rem;
+
+}
+
+.registration .form .btn a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--blue);
+    transition: 0.3s ease;
+}
+
+.registration .form .btn a:hover {
+    color: white;
+    background: var(--purple);
+}
+
+/* ****************************registration Section End**************************** */
+
+
+/* ****************************Expert Section Start**************************** */
+.expert-sect {
+    padding: 8vw;
+    text-align: center;
+}
+
+.expert-sect .expert-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+.expert-box .profile {
+    background-color: rgba(86, 18, 214, 0.3);
+    padding: 30px 10px;
+}
+
+.expert-box .profile h4 {
+    font-size: 2rem;
+    color: black;
+}
+
+.expert-box .profile .pro-links {
+    margin-top: 10px;
+}
+
+.profile .pro-links i {
+    padding: 1rem 1.3rem;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0 0.3rem;
+    transition: 0.3s ease;
+}
+
+.profile .pro-links i:hover {
+    background-color: blue;
+    color: #fff;
+    border: 1px solid rgb(21, 21, 100);
+}
+
+
+/*  ****************************Expert Section End  *****************************/
+
+/*  ****************************Footer Section Start  *****************************/
+footer {
+    width: 95%;
+    margin: 10px auto;
+    padding: 8vw;
+    background-color: var(--light-blue);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+footer .footer-col {
+    padding-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.footer-col li {
+    list-style: none;
+    color: var(--white);
+    padding: 10px 0;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-col li:hover {
+    color: var(--black);
+    font-weight: bold;
+}
+
+.footer-col p {
+    color: var(--white);
+}
+
+.footer-col .subscribe {
+    margin-top: 2rem;
+
+}
+
+.footer-col .subscribe input {
+    width: 22rem;
+    padding: 12px 15px;
+    background-color: var(--white);
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.footer-col .subscribe a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 11px 15px;
+    color: #fff;
+    font-weight: 600;
+    background-color: black;
+    transition: 0.3s ease;
+
+}
+
+.footer-col .subscribe a:hover {
+    background: blue;
+    color: white;
+}
+
+footer .copyright {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+
+footer .copyright a:hover {
+    font-size: 1.8rem;
+    color: blue;
+}
+
+footer .copyright p {
+    color: #fff;
+}
+
+footer .copyright .pro-links {
+    margin-top: 0px;
+}
+
+footer .copyright .pro-links i {
+    padding: 10px 13px;
+    background-color: var(--white);
+    color: black;
+    transition: 0.3s ease;
+    font-size: 1.2rem;
+}
+
+footer .copyright .pro-links i:hover {
+    background-color: blue;
+    color: white;
+}
+
+/*  ****************************Footer Section End **************************** */
+
+/* ............................................. About Page Start............................................. */
+
+/* About Container Section Start */
+
+#about-container {
+    padding: 8vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#about-container .about-img {
+    flex-basis: 60%;
+}
+
+#about-container .about-img img {
+    width: 100%;
+}
+
+#about-container .about-text {
+    flex-basis: 35%;
+    text-align: left;
+}
+
+
+#about-container .about-text p {
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+#about-container .about-feature {
+    display: flex;
+    gap: 20px;
+    margin-top: 5rem;
+}
+
+#about-container .about-feature img {
+    height: 60px;
+}
+
+
+/* About Container Section End */
+
+/* Trusted By Section Start */
+#trust-section {
+    text-align: center;
+    padding: 0 8vw 8vw 8vw;
+}
+
+#trust-section .trust-img {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#trust-section .trust-img img {
+    margin-top: 20px;
+    width: 90px;
+    height: auto;
+}
+
+
+/* Trusted By Section End */
+
+/* ............................................. About Page End .............................................*/
+/* ............................................course page section START............................................ */
+#courses-section-page {
+    text-align: center;
+}
+
+#courses-section-page h1 {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+#courses-section-page .courses {
+    background: linear-gradient(to right, rgba(86, 18, 214, 0.7), rgb(211, 206, 186));
+    padding: 8vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 15rem;
+}
+
+#courses-section-page .course {
+    text-align: left;
+    background-color: #f9f9ff;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+#courses-section-page .course img {
+    width: 100%;
+    height: 65%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#courses-section-page .course .c-details {
+    padding: 1.7rem 1.5rem 1rem 1.5rem;
+    margin-bottom: 4rem;
+}
+
+#courses-section-page .course .c-details h4 {
+    font-size: 1.2rem;
+}
+
+#courses-section-page .course .c-details span {
+    font-size: 1.1rem;
+}
+
+#courses-section-page .course .c-details i {
+    color: #fdc938;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+#courses-section-page .course .c-price {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    bottom: 25%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+#courses-section-page .course .tag {
+    background-color: rgba(210, 247, 1, 0.8);
+    backdrop-filter: blur(5px);
+    color: rgb(0, 0, 0);
+    line-height: 25px;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/*............................................ course page section end ............................................*/
+/* ............................................. Course  details page Start .............................................*/
+/* Course details Section Start */
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 6vw;
+    gap: 20px;
+}
+
+.course-details .overview h3 {
+    font-size: 3rem;
+}
+
+.course-details .overview>h3 {
+    margin-bottom: 1rem;
+}
+
+.course-details h4 {
+    padding: 3.5rem 0 2.5rem 0;
+}
+
+.course-details hr {
+    height: 2px;
+    background-color: rgba(236, 226, 229, 0.5);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.course-details .overview {
+    width: 70%;
+}
+
+.course-details .overview .course-img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+}
+
+.course-details .overview .course-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.course-details .overview .course-head .course-name {
+    width: 70%;
+}
+
+.course-details .overview .course-head .course-name .stars {
+    margin: 0.6rem 0;
+}
+
+.course-details .overview .course-head .course-name .stars i {
+    color: #fdc938;
+    font-size: 1.6rem;
+}
+
+.course-details .overview .course-head .course-name p {
+    font-size: 1.5rem;
+}
+
+.course-details .overview .course-head span {
+    padding: 1.6rem 2.2rem;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: rgba(86, 18, 214, 0.5);
+}
+
+.course-details .learn p {
+    font-size: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+.course-details .learn p i {
+    color: var(--blue);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+
+.course-details .tutor {
+    display: flex;
+    align-items: center;
+
+}
+
+.course-details .tutor img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.course-details .tutor h4 {
+    padding: 0;
+
+}
+
+/* Course details Section end*/
+/* enroll section start */
+.enroll {
+    width: 30%;
+    padding: 0 1rem 3rem 3rem;
+    border-radius: 11px;
+    box-shadow: 0px 20px 40px 0 rgb(11 2 55 / 8%);
+    background: linear-gradient(to left, rgba(86, 18, 214, 0.7), rgb(211, 206, 186));
+}
+
+
+.enroll h4 {
+    padding-bottom: 1rem;
+}
+
+.enroll p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    align-items: center;
+}
+
+.enroll i {
+    color: var(--blue);
+    margin-right: 1.8rem;
+}
+
+.enroll .enroll-btn {
+    padding: 2.5rem 0 2rem 0px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.enroll .enroll-btn a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 1.3rem 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+.enroll .enroll-btn a:hover {
+    background-color: blue;
+}
+
+/* enroll section end */
+/* ............................................. course details page End .............................................*/
+
+
+/* ............................................. Contact page Start .............................................*/
+.contact {
+    padding: 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact .getInTouch {
+    width: 35%;
+}
+
+.contact .getInTouch h2 {
+    font-weight: 800;
+    line-height: 0.8;
+    margin-bottom: 1.6rem;
+}
+
+.contact .getInTouch p {
+    line-height: 24px;
+    margin-bottom: 3.3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #1e00ff;
+}
+
+.contact .getInTouch h4 {
+    line-height: 36px;
+    margin-bottom: 1.5rem;
+}
+
+.contact .getInTouch .getIn_details div {
+    display: flex;
+}
+
+.contact .getInTouch .getIn_details div i {
+    font-size: 1.6rem;
+    line-height: 22px;
+    color: var(--blue);
+    margin-right: 2rem;
+}
+
+.contact .getInTouch .getIn_details div p {
+    font-size: 1.4rem;
+    border-bottom: none;
+    line-height: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact .getIn_details .pro-links .fab {
+    padding: 0.8rem 1.3rem;
+    background-color: #fff;
+    color: black;
+    transition: 0.3s ease;
+    border: 1px solid black;
+}
+
+.contact .getIn_details .pro-links i:hover {
+    background-color: var(--blue);
+    color: #fff;
+    border-color: var(--blue);
+}
+
+.contact .form {
+    width: 60%;
+    background-color: rgba(86, 18, 214, 0.5);
+    padding: 4rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact .form h3 {
+    font-size: 2.5rem;
+    line-height: 30px;
+    margin-bottom: 0.8rem;
+}
+
+.contact .form p {
+    font-size: 1.4rem;
+    line-height: 24px;
+    padding-bottom: 2.5rem;
+
+}
+
+.contact .form .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact .form .form-row input {
+    width: 48%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact .form .form-col input,
+.contact .form .form-col textarea {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact .form button {
+    font-size: 1.4rem;
+    padding: 1.3rem 2.5rem;
+    background: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.contact .form button:hover {
+    background: blue;
+}
+
+#map {
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 8vw;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ............................................. Contact page End .............................................*/
+
+/* /////////////////////////////////////////////small laptop screen Code Start///////////////////////////////////////////////////// */
+@media(max-width:1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.1rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    /*  **************************** 2nd NavBar Section Start  **************************** */
+    #navbar2 .navSearch input[type="text"] {
+        width: 40rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 1.6rem;
+        outline-color: #4e99e9;
+    }
+
+    /*  **************************** 2nd NavBar Section End **************************** */
+    #h-section .hero-text {
+        width: 35%;
+    }
+
+    /* ************************Course Section Start **************************/
+    #courses-section .popular .p-text,
+    .free .f-text,
+    .web .web-text,
+    .app .app-text,
+    .ai .ai-text,
+    .blockchain .bChain-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 4rem;
+    }
+
+    #courses-section .free .f-text a,
+    .app .app-text a,
+    .ai .ai-text a,
+    .blockchain .bChain-text a {
+        margin-top: 5rem;
+    }
+
+    .course .c-details {
+        white-space: nowrap;
+    }
+
+    /* ************************course section end *************************/
+    /* ************************course page section start *************************/
+    #courses-section-page h1 {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    #courses-section-page .course .c-details {
+        padding: 1.7rem 1.5rem 0.5rem 1.5rem;
+        margin-bottom: 0rem;
+    }
+
+    /* ************************course page section end *************************/
+    /* ***********************contact us page start*********************** */
+    .contact {
+        padding: 8vw 4vw;
+
+    }
+
+    /* ***********************contact us page end*********************** */
+    /************************ Course details page start ************************/
+    .course-details {
+        padding: 6vw 3vw;
+    }
+
+    .course-details .overview h3 {
+        font-size: 2rem;
+    }
+
+    .course-details .overview .course-head .course-name .stars i {
+        font-size: 1.3rem;
+    }
+
+    .course-details .overview .course-head .course-name p {
+        font-size: 1.3rem;
+    }
+
+    .course-details .overview .course-head span {
+        padding: 1.2rem 1.9rem;
+        font-size: 2rem;
+    }
+
+    .course-details .learn p {
+        font-size: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+
+    .course-details .learn p i {
+        font-size: 1rem;
+    }
+
+    .enroll {
+        width: 30%;
+        padding: 0 1rem 3rem 1rem;
+    }
+
+    .enroll p {
+        font-size: 1.2rem;
+        margin: 1.1rem 0 1.3rem 0;
+    }
+
+    .enroll .enroll-btn {
+        padding: 2rem 0 2rem 0px;
+    }
+
+    .enroll .enroll-btn a {
+        font-size: 1.1rem;
+        padding: 1.1rem 2rem;
+    }
+
+    /* ***********************Course details page end ************************/
+
+    /* ***********************about page start*********************** */
+    #about-container .about-img {
+        flex-basis: 50%;
+    }
+
+    #about-container .about-text {
+        flex-basis: 45%;
+    }
+
+    /* ***********************about page start ************************/
+
+}
+
+
+
+/* /////////////////////////////////////////////small laptop screen Code end//////////////////////////////////////////////// */
+
+
+
+
+/* ///////////////////////////////////////////Tablet screen Code Start///////////////////////////////////////////// */
+
+@media(max-width:768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+
+    /* navbar Section Start */
+    #navbar {
+        padding: 1vw 10vw;
+    }
+
+    #navbar .logo a {
+        font-size: 3rem;
+    }
+
+    #navbar .login i {
+        font-size: 2.5rem;
+    }
+
+    #navbar .links {
+        display: none;
+    }
+
+    #navbar2 .navSearch input[type="text"] {
+        width: 25rem;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    #navbar2 .navSearch button[type="submit"] {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    /* navbar Section end */
+    /* bottom NavBar section Start */
+
+    .mobBtmNav {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(68, 2, 248, 0.3);
+        padding: 1.2vw 8vw;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        z-index: 99;
+        text-align: center;
+
+
+    }
+
+    .c-details-mobBtmNav {
+        background: linear-gradient(to right, rgba(86, 18, 214, 0.7), rgb(211, 206, 186));
+
+    }
+
+    .mobBtmNav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .mobBtmNav a.active,
+    .mobBtmNav a:hover {
+        color: var(--blue);
+    }
+
+    .mobBtmNav div {
+        font-size: 1.5rem;
+    }
+
+    .mobBtmNav div i {
+        font-size: 1rem;
+    }
+
+    .mobBtmNav div:nth-child(3) i {
+        font-size: 2rem;
+    }
+
+    /* bottom navbar section end */
+    /* header section start */
+    #h-section .hero-text {
+
+        top: 30%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #h-section .hero-text .heroSearch input[type="text"] {
+        width: 25rem;
+        padding: 1rem;
+        font-size: 1rem;
+
+    }
+
+    #h-section .hero-text .heroSearch button[type="submit"] {
+        font-size: 1rem;
+    }
+
+    /* header section end */
+    /* courses section start */
+    #courses-section button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    #courses-section button.learn-more {
+        width: 12rem;
+        height: auto;
+    }
+
+    #courses-section button.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        left: -10%;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #282936;
+        border-radius: 1.625rem;
+    }
+
+    #courses-section button.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+
+    #courses-section button.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+
+    #courses-section button.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+
+    #courses-section button.learn-more .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #282936;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+
+    #courses-section button:hover .circle {
+        width: 120%;
+    }
+
+    #courses-section button:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+    }
+
+    #courses-section button:hover .button-text {
+        color: #fff;
+    }
+
+    /* courses section end */
+    
+    #courses-section-page .course .c-details {
+        padding: 1.2rem 1rem 1rem 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    /* Registration Section Start */
+    .registration {
+        padding: 6vw 4vw 6vw 4vw;
+    }
+
+    .registration .form {
+        padding: 3rem 2rem;
+    }
+
+    .registration .form h4 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .registration .form input {
+        margin: 1rem 0;
+        padding: 1rem 6rem 1rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .registration .form input::placeholder {
+        font-size: 1rem;
+    }
+
+    .registration .form .btn a {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .reminder .time .date {
+        padding: 1.4rem 3rem;
+        margin: 0 5px 10px 5px;
+        font-size: 1.5rem;
+        font-weight: 500px;
+    }
+
+    /* REgistration Section End */
+    /* ***********************contact us page start*********************** */
+    .contact {
+        padding: 8vw;
+        flex-direction: column;
+    }
+
+    .contact .getInTouch {
+        width: 100%;
+        margin-bottom: 10rem;
+    }
+
+    .contact .form {
+        width: 100%;
+    }
+
+    .contact .form .form-row {
+        flex-direction: column;
+    }
+
+    .contact .form .form-row input {
+        width: 100%;
+    }
+
+    /* ***********************contact us page end*********************** */
+    /* ***********************Course details page start ************************/
+    .course-details {
+        flex-direction: column;
+        padding: 6vw;
+    }
+
+    .course-details .overview {
+        width: 100%;
+    }
+
+    .enroll {
+        width: 60%;
+    }
+
+    .enroll p {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+        align-items: center;
+    }
+
+    .enroll .enroll-btn a {
+        font-size: 1.5rem;
+        padding: 1.3rem 2.5rem;
+    }
+
+    /* ***********************Course details page end ************************/
+    /* ***********************about page start ************************/
+    #about-container {
+        flex-direction: column;
+    }
+
+    #about-container .about-img {
+        width: 50%;
+    }
+
+
+    #about-container .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    #about-container .about-text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #about-container .about-text .about-feature {
+        text-align: left;
+    }
+
+
+    /* ***********************about page end ************************/
+
+    /* footer section start */
+    footer {
+        width: 95%;
+        margin: 10px auto;
+        padding: 8vw;
+        background-color: var(--light-blue);
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin-bottom: 7rem;
+    }
+
+    /* footer section end */
+
+}
+
+/* ////////////////////////////////////////////Tablet screen Code End/////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////Mobile screen Code Start/////////////////////////////////////////////////// */
+@media(max-width:500px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    /* navbar section strat */
+    #navbar .logo a {
+        font-size: 2.3rem;
+    }
+
+    #navbar .login i {
+        font-size: 2rem;
+    }
+
+    #navbar2 .logo a {
+        font-size: 1.8rem;
+
+    }
+
+    #navbar2 .navSearch input[type="text"] {
+        width: 15rem;
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    #navbar2 .navSearch button[type="submit"] {
+        font-size: 0.8rem;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .mobBtmNav {
+        padding: 1.5vw 8vw;
+    }
+
+    .mobBtmNav div:nth-child(3) {
+        display: none;
+    }
+
+    .mobBtmNav div {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .mobBtmNav div i {
+        font-size: 1.2rem;
+    }
+
+    /* NAVBAR SECTION END */
+    /* header section start */
+    #h-section .hero-text {
+
+        top: 35%;
+        left: 20%;
+        width: 60%;
+    }
+
+    #h-section .hero-text p {
+        font-size: 1rem;
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    #h-section .hero-text .heroSearch input[type="text"] {
+        width: 15rem;
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+
+    }
+
+    #h-section .hero-text .heroSearch button[type="submit"] {
+        font-size: 0.8rem;
+        padding: 0.7rem 1rem;
+    }
+
+    /* header section end */
+    /* feature section start */
+    .feature .feature-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .feature p {
+        font-size: 1rem;
+    }
+
+    .feature .f-card i {
+        font-size: 2.0rem;
+    }
+
+    .feature .f-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature .f-card p {
+        font-size: 0.9rem;
+    }
+
+    /* feature section end */
+
+    /* ****************************    category Section Start  ******************* */
+    #category-section {
+        padding: 0 15vw 8vw 15vw;
+        text-align: center;
+
+    }
+
+    #category-section h1 {
+        margin: 5rem 0;
+    }
+
+    #category-section .category-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    /*****************************  Registration Section Start **************************** */
+    .registration {
+        flex-direction: column;
+        padding: 6vw 8vw 6vw 8vw;
+        text-align: center;
+    }
+
+    .reminder .time {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* **************************** footer Section Start **************************** */
+    .footer-col .subscribe input {
+        width: 15rem;
+        padding: 10px 15px;
+    }
+
+    .footer-col .subscribe {
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-col .subscribe a {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+
+    footer .copyright {
+        margin-top: 0;
+    }
+
+    /* Footer Section End */
+    /* ***********************contact us page start*********************** */
+    .contact .form {
+        padding: 4rem 2rem;
+    }
+
+    .contact .getInTouch>p {
+        font-size: 1.2rem;
+
+    }
+
+
+    .contact .form p {
+        font-size: 1.2rem;
+        line-height: 16px;
+        padding-bottom: 2rem;
+
+    }
+
+    .contact .form .form-row input {
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1.5rem 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact .form .form-col input,
+    .contact .form .form-col textarea {
+
+        padding: 1.5rem 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact .form button {
+        font-size: 1.2rem;
+        padding: 1.2rem 2rem;
+    }
+
+    /* ***********************contact us page end*********************** */
+    /* ***********************Course section  start ************************/
+    #courses-section {
+        padding: 0 8vw 4vw 8vw;
+    }
+
+    #courses-section .p-text h2,
+    #courses-section .f-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .web .web-text h2,.app .app-text h2,
+    .ai .ai-text h2,
+    .blockchain .bChain-text h2 {
+        font-size: 1.7rem;
+    }
+
+    #courses-section .p-courses h4,
+    #courses-section .f-courses h4 {
+        font-size: 1rem;
+    }
+
+    #courses-section button.learn-more {
+        width: 8.5rem;
+        height: auto;
+    }
+
+    #courses-section button.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        left: -10%;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #282936;
+        border-radius: 1.625rem;
+    }
+
+    #courses-section button.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+
+    #courses-section button.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+
+    #courses-section button.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+
+    #courses-section button.learn-more .button-text1 {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #282936;
+        font-weight: 700;
+        line-height: 1.35;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 1.3rem;
+    }
+
+    #courses-section button:hover .circle {
+        width: 120%;
+    }
+
+    #courses-section button:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+    }
+
+    #courses-section button:hover .button-text1 {
+        color: #fff;
+    }
+
+    .button-text {
+        display: none;
+    }
+
+    .button-text1 {
+        display: inherit;
+    }
+
+
+    /* ***********************Course section  end ************************/
+
+    /* ***********************Course details page start ************************/
+    .course-details .overview .course-img {
+        height: 30vh;
+    }
+
+    .course-details .overview h3 {
+        font-size: 1.8rem;
+    }
+
+    .course-details .overview p {
+        font-size: 1.3rem;
+    }
+
+    .course-details .overview .course-head .course-name .stars i {
+        font-size: 1rem;
+    }
+
+    .course-details .overview .course-head .course-name p {
+        font-size: 1rem;
+    }
+
+    .course-details .overview .course-head span {
+        padding: 1rem 1.5rem;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .course-details .learn p {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .course-details .learn p i {
+        color: var(--blue);
+        font-size: 1rem;
+        font-weight: 700;
+        margin-right: 1.5rem;
+    }
+
+    .course-details .tutor h4 {
+        font-size: 1.6rem;
+
+    }
+
+    .course-details .tutor p {
+        font-size: 1.3rem;
+    }
+
+    .enroll {
+        width: 100%;
+    }
+
+    #courses-section-page h1 {
+        padding: 0 8vw;
+    }
+
+    /* ***********************Course details page end ************************/
+    /* ***********************about page start************************/
+    #about-container .about-feature .feature-txt p {
+        font-size: 1.2rem;
+    }
+
+    #trust-section p {
+        font-size: 1rem;
+    }
+
+    /* ***********************about page end ************************/
+
+}
+
+/* /////////////////////////////////////////////Mobile screen Code Start/////////////////////////////////////////////// */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSkills Login Page</title>
+    <link rel="stylesheet" href="form.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icon1.webp">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formBox">
+
+            <form action="" name="formFill" onsubmit="return loginvalidation()">
+                <h2>Login</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="Email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="Password" placeholder="Password">
+                </div>
+
+                <div class="button">
+                    <input type="submit" class="form-btn" onclick="loginvalidation()" value="Login">
+                </div>
+                <div class="group">
+                    <span><a href="#">Forget-Password</a></span>
+                    <span><a href="RegisterForm.html">Register</a></span>
+
+                </div>
+
+            </form>
+        </div>
+        <!-- Pop up page after login complete -->
+        <div class="popup" id="popup">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Consratulation!</h2>
+            <p>You have successfully.<br> Logged In!</p>
+            <a href="index.html"><button onclick="closeSlide()">Go to Website</button></a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- JS file link -->
+    <script src="registerForm.js"></script>
+    <!-- font awsome cdn link -->
+    <script src="https://kit.fontawesome.com/1bd6632352.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
